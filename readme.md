@@ -22,6 +22,8 @@
 
 ## Description of `Strategy Pattern`
 
+> Tất cả con đường đều có thể đến kết quả
+
 ```
 /**
  * @param {*} originalPriced
@@ -69,3 +71,7 @@ Sẵn có dữ liệu đã được database
 Tỷ lệ ghi cao, có n event sẽ có n bản ghi
 
 Tốc độ nhận của đối tượng pull sẽ chậm hơn dối tượng khác
+
+## Description of `Facade Pattern`
+
+> Phía sau việc đơn giản là một hệ thống phức tạp

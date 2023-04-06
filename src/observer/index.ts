@@ -4,12 +4,12 @@ class Person {
           this.name = name;
      }
 
-     updateStatus(index: number) {
-          this.goToHelp(index)
+     updateStatus(event: string) {
+          this.goToHelp(event)
      }
 
-     goToHelp(index: number) {
-          console.log(`${this.name} :::::::::PING: ${index}`)
+     goToHelp(event: string) {
+          console.log(`${this.name} - Event: ${event}`)
      }
 }
 
@@ -19,12 +19,12 @@ class Subject {
           this.persons = []
      }
 
-     addPersons(person: Person) {
+     subscribe(person: Person) {
           this.persons.push(person)
      }
 
-     notify(index: number) {
-          this.persons.forEach(person => person.updateStatus(index))
+     emit(event: string) {
+          this.persons.forEach(person => person.updateStatus(event))
      }
 }
 
@@ -35,7 +35,7 @@ const personOne = new Person("Jax")
 const personTwo = new Person("Lilia")
 
 // Add persons to Subject
-subject.addPersons(personOne)
-subject.addPersons(personTwo)
+subject.subscribe(personOne)
+subject.subscribe(personTwo)
 
 
