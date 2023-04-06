@@ -45,3 +45,27 @@ console.log(getPriceStrategy[typePromotion](originalPriced))
 ```
 
 ```
+
+### `Pull Model`
+
+**Nhược điểm**:
+
+Nếu có n đối tượng cần gửi n request.
+
+Thời gian chờ đợi render ra new feed thì lâu.
+
+**Ưu điểm**:
+
+Khi đối tượng sinh ra một event chỉ cần lưu event vào database của đối tượng đó.
+
+### `Push Model`
+
+**Ưu điểm**:
+
+Sẵn có dữ liệu đã được database
+
+**Nhược điểm**
+
+Tỷ lệ ghi cao, có n event sẽ có n bản ghi
+
+Tốc độ nhận của đối tượng pull sẽ chậm hơn dối tượng khác
